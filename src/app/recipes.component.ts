@@ -14,10 +14,10 @@ let a : recipe = {
 })
 export class Recipes{
     recipes = [a];
-    test = signal("balh");
 
     addToRecipes(recipe: recipe){
         this.recipes.push(recipe);
     };
+    
     
 }

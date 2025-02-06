@@ -13,3 +13,23 @@
     height: 80vh;
     width: 50vw;
 }
+
+#adding_recipe_modal{
+    position: absolute;
+    width: 500px;
+    border: solid 1px black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+}
+
+#adding_recipe_modal.disabled{
+    opacity: 0;
+}
+
+div.instruction{
+    display: flex;
+    gap: 1rem;
+}

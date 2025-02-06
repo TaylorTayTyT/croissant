@@ -1,4 +1,18 @@
 <div>
+    <div id="adding_recipe_modal" class="disabled inknut-antiqua-semibold">
+        <h1>Adding</h1>
+        <div>Title</div>
+        <textarea></textarea>
+        <div>Author</div>
+        <textarea></textarea>
+        <div class="instruction">
+            <textarea></textarea>
+            <textarea></textarea>
+        </div>
+
+        <button (click) = "addInstruction($event)">add instruction</button>
+        <button (click)="toggleAddingRecipe($event)">Close</button>
+    </div>
     <div class="title inknut-antiqua-regular">
         Croissant
     </div>
@@ -6,5 +20,6 @@
         <u>Recipes</u>
         <recipe-component></recipe-component>
     </div>
-    
+    <button (click)="toggleAddingRecipe($event)">Add Recipe</button>
+
 </div>
