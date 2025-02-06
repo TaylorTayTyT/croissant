@@ -1,3 +1,24 @@
 #recipes{
     font-size: 1rem;
+    text-align: center;
+}
+ul.recipe_ul{
+    list-style-type: none;
+    padding: 0;
+}
+li.recipe{
+    cursor: pointer;
+}
+li.recipe:hover{
+    text-decoration: underline;
+}
+#arrows{
+    display: flex;
+    justify-content: space-between;
+}
+#left_arrow{
+    cursor: pointer;
+}
+#right_arrow{
+    cursor: pointer;
 }

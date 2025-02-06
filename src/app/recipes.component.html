@@ -1,6 +1,14 @@
 <div id="recipes">
     {{ test() }} <!-- Display the value of test() -->
-    <ul>
-      <li *ngFor="let recipe of recipes">{{ recipe }}</li> <!-- Iterate over recipes -->
+    <ul class="recipe_ul">
+      <li class="recipe" *ngFor="let recipe of recipes">{{ recipe.title }} - {{recipe.author}}</li> <!-- Iterate over recipes -->
     </ul>
+    <div id="arrows">
+      <svg id="left_arrow" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 4.29289c.3905.39053.3905 1.02369 0 1.41422L9.41421 12l6.29289 6.2929c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-7.00001-7a.99997.99997 0 0 1 0-1.4142l7.00001-7.00001c.3905-.39052 1.0237-.39052 1.4142 0Z" fill="#000"/>
+        </svg>
+        <svg id="right_arrow" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 4.29289c.39053-.39052 1.02369-.39052 1.41422 0l6.99999 7.00001c.3905.3905.3905 1.0237 0 1.4142l-6.99999 7c-.39053.3905-1.02369.3905-1.41422 0-.39052-.3905-.39052-1.0237 0-1.4142L14.5858 12 8.29289 5.70711c-.39052-.39053-.39052-1.02369 0-1.41422Z" fill="#000"/>
+        </svg>
+  </div>
   </div>
