@@ -1,17 +1,18 @@
 <div>
     <div id="adding_recipe_modal" class="disabled inknut-antiqua-semibold">
-        <h1>Adding</h1>
         <div>Title</div>
         <textarea></textarea>
         <div>Author</div>
         <textarea></textarea>
-        <div class="instruction">
+        <div>Steps</div>
+        <div *ngFor="let instruction of instructions; let i = index" class="instruction">
             <textarea></textarea>
             <textarea></textarea>
+            <div [attr.itemid]="i" class = "delete_instruction" (click)="deleteInstruction(i)">delete</div>
         </div>
 
-        <button (click) = "addInstruction($event)">add instruction</button>
-        <button (click)="toggleAddingRecipe($event)">Close</button>
+        <button id="add_instruction" (click) = "addInstruction($event)">add instruction</button>
+        <button id="cancel_add_recipe" (click)="toggleAddingRecipe($event)">Close</button>
     </div>
     <div class="title inknut-antiqua-regular">
         Croissant
@@ -20,6 +21,6 @@
         <u>Recipes</u>
         <recipe-component></recipe-component>
     </div>
-    <button (click)="toggleAddingRecipe($event)">Add Recipe</button>
+    <button id="add_recipe" (click)="toggleAddingRecipe($event)">Add Recipe</button>
 
 </div>

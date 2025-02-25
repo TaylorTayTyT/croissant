@@ -1,29 +1,29 @@
 import { Component, ViewChild, ElementRef, ChangeDetectorRef } from "@angular/core";
 
 import { Recipes } from "./recipes.component";
+import { CommonModule } from "@angular/common";
 @Component({
     selector: 'home-component',
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [Recipes]
+    imports: [Recipes, CommonModule]
 })
 
 export class HomeComponent{
     constructor(private cdr: ChangeDetectorRef){}
     addingRecipe = false; 
+    instructions : number[] = []
     toggleAddingRecipe(e: MouseEvent){
         this.addingRecipe = !this.addingRecipe;
         document.getElementById("adding_recipe_modal")?.classList.toggle("disabled");
+        this.cdr.detectChanges(); 
     }
     addInstruction(e: MouseEvent){
-        const parent = document.getElementById("adding_recipe_modal");
-        const element = document.createElement("div");
-        element.classList.add("instruction");
-        const t1 = document.createElement("textarea");
-        const t2 = document.createElement("textarea");
-        element.appendChild(t1)
-        element.appendChild(t2)
-        parent?.appendChild(element)
-        this.cdr.markForCheck(); 
+        this.instructions.push(1); 
+        this.cdr.detectChanges(); 
     }
+    deleteInstruction(i: number){
+        this.instructions.splice(i, 1);
+    }
+
 }

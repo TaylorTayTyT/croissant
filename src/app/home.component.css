@@ -17,11 +17,14 @@
 #adding_recipe_modal{
     position: absolute;
     width: 500px;
+    max-height: 500px;
     border: solid 1px black;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 1rem;
+    overflow-y: scroll;
+    background-color: rgba(222, 156, 33, 0.5);
 
 }
 
@@ -32,4 +35,5 @@
 div.instruction{
     display: flex;
     gap: 1rem;
+    padding-top: 1rem;
 }
