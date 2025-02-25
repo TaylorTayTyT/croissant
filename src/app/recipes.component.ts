@@ -18,6 +18,4 @@ export class Recipes{
     addToRecipes(recipe: recipe){
         this.recipes.push(recipe);
     };
-    
-    
 }

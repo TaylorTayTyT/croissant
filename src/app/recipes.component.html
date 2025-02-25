@@ -2,7 +2,8 @@
     <ul class="recipe_ul">
       <li class="recipe" *ngFor="let recipe of recipes">{{ recipe.title }} - {{recipe.author}}</li> <!-- Iterate over recipes -->
     </ul>
-    <div id="arrows">
+
+     <div *ngIf="recipes.length > 5" id="arrows">
       <svg id="left_arrow" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 4.29289c.3905.39053.3905 1.02369 0 1.41422L9.41421 12l6.29289 6.2929c.3905.3905.3905 1.0237 0 1.4142-.3905.3905-1.0237.3905-1.4142 0l-7.00001-7a.99997.99997 0 0 1 0-1.4142l7.00001-7.00001c.3905-.39052 1.0237-.39052 1.4142 0Z" fill="#000"/>
         </svg>
